@@ -10,7 +10,7 @@ class Directory extends React.Component {
           title: 'hats',
           imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
           id: 1,
-          linkUrl: 'shop/hats',
+          linkUrl: 'hats',
         },
         {
           title: 'jackets',
@@ -47,7 +47,7 @@ class Directory extends React.Component {
         {/* {this.state.secttion.map(({ title, id, imageUrl }) => (
           <HeroSection key={id} title={title} />
         ))} */}
-        <HeroSection section={this.state.section} key={this.state.section.id} />
+        <HeroSection section={this.state.section} />
       </div>
     )
   }

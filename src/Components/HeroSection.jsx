@@ -1,15 +1,16 @@
 import React from 'react'
 import './HeroSection.scss'
-const Category = ({ section }) => {
+import { withRouter } from 'react-router-dom'
+const Category = ({ section, match, history }) => {
   console.log(section)
   return (
     <section className='HeroSection'>
       <div className='productCategories'>
         <div className='productCategories__heading'>All Categories</div>
         <div className='productCategories__lists'>
-          {section.map((el) => {
+          {section.map((el, index) => {
             return (
-              <ul>
+              <ul key={index}>
                 <li>
                   <a href='/#'>{el.title}</a>
                 </li>
@@ -34,10 +35,13 @@ const Category = ({ section }) => {
       <div className='SubCategories'>
         {/* <h2>Sub Categories</h2> */}
         <div className='subCategory'>
-          {section.map((el) => {
+          {section.map((el, index) => {
             return (
-              <div className='subCategoryItems'>
-                <div className='subCategoryItems__image'>
+              <div key={index} className='subCategoryItems'>
+                <div
+                  className='subCategoryItems__image'
+                  onClick={() => history.push(`${match.url}${el.linkUrl}`)}
+                >
                   <img className='' src={el.imageUrl} alt='missing'></img>
                 </div>
                 <span className='subCategoryItems__text'>{el.title}</span>
@@ -51,4 +55,4 @@ const Category = ({ section }) => {
   )
 }
 
-export default Category
+export default withRouter(Category)
