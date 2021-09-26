@@ -1,7 +1,7 @@
 import React from 'react'
 import Directory from '../../Directory/Directory'
 
-const Homepage = () => {
+const Homepage = ({ currentuser }) => {
   return (
     <div className='Homepage'>
       <Directory />

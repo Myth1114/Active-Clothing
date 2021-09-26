@@ -1,0 +1,48 @@
+.custom-btn {
+  color: #fff;
+  //   border-radius: 0.8rem;
+  padding: 1.2rem 2rem;
+  font-weight: bold;
+  background: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  z-index: 10;
+  cursor: pointer;
+  //   &:hover {
+  //     transform: translateY(-0.3rem);
+  //   }
+  //   &:active {
+  //     transform: translateY(-0.1rem);
+  //   }
+}
+
+/* 1 */
+.btn-1 {
+  width: 100%;
+  background: orangered;
+  border: none;
+}
+.btn-2 {
+  width: auto;
+  background: orangered;
+  padding: 1rem 2rem;
+  border: none;
+}
+.btn-3 {
+  width: 6rem;
+  background-color: orangered;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  color: #fff;
+}
+.btn-4 {
+  width: auto;
+  border-radius: 0.5rem;
+}

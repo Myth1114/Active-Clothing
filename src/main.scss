@@ -1,4 +1,12 @@
+$button-colors: #ffa931;
+
 @import './Components/HeroSection.scss';
+@import './Components/ProductCard/ProductCard.scss';
+@import './Components/CollectionPreview/CollectionPreview.scss';
+@import './Pages/SigninSignup/SigninSignup.scss';
+@import './Components/CustomButton/CustomButton.scss';
+@import './Components/Header/Header.scss';
+@import './Components/Variables/Variables.scss';
 
 *,
 ::after,
@@ -16,9 +24,9 @@ html {
   /* the default fontsize by browser is 16px
   100% is equals 16px ,62.5% = 10px */
 }
-@media (max-width: 900px) {
+@media (max-width: 1800px) {
   html {
-    font-size: 50%;
+    font-size: 75%;
   }
 }
 @media (max-width: 1200px) {
@@ -26,14 +34,12 @@ html {
     font-size: 56.25%;
   }
 }
-@media (max-width: 1800px) {
+
+@media (max-width: 900px) {
   html {
-    font-size: 75%;
+    font-size: 50%;
   }
 }
-// body {
-//   box-sizing: border-box;
-// }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -57,16 +63,7 @@ a {
   margin-right: auto;
   margin-left: auto;
 }
-.clearfix:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+
 img {
   width: 100%;
   vertical-align: middle;

@@ -1,6 +1,8 @@
 import React from 'react'
 import './HeroSection.scss'
 import { withRouter } from 'react-router-dom'
+import HomeCarousel from './Carousel/Carousel'
+// import { Link } from 'react-router-dom'
 const Category = ({ section, match, history }) => {
   console.log(section)
   return (
@@ -30,7 +32,9 @@ const Category = ({ section, match, history }) => {
           )
         })}
       </div> */}
-      <div className='Carousel'>Carousel</div>
+      <div className='Carousel'>
+        <HomeCarousel />
+      </div>
       <div className='TopDeals'>TopDeals</div>
       <div className='SubCategories'>
         {/* <h2>Sub Categories</h2> */}
