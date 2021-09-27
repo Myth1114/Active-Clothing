@@ -7,7 +7,7 @@ $button-colors: #ffa931;
 @import './Components/CustomButton/CustomButton.scss';
 @import './Components/Header/Header.scss';
 @import './Components/Variables/Variables.scss';
-
+@import './Directory/Directory.scss';
 *,
 ::after,
 ::before {
@@ -24,27 +24,29 @@ html {
   /* the default fontsize by browser is 16px
   100% is equals 16px ,62.5% = 10px */
 }
-@media (max-width: 1800px) {
-  html {
-    font-size: 75%;
-  }
-}
-@media (max-width: 1200px) {
-  html {
-    font-size: 56.25%;
-  }
-}
+// @media (max-width: 1800px) {
+//   html {
+//     font-size: 75%;
+//   }
+// }
+// @media (max-width: 1200px) {
+//   html {
+//     font-size: 56.25%;
+//   }
+// }
 
-@media (max-width: 900px) {
-  html {
-    font-size: 50%;
-  }
-}
+// @media (max-width: 900px) {
+//   html {
+//     font-size: 50%;
+//   }
+// }
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   line-height: 1.7;
+  // background: #fafcfc;
+  text-transform: capitalize;
   // background-color: rgba(37, 188, 241, 0.15);
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -74,4 +76,11 @@ img {
   //   transform: scale(1.1);
   //   transition: all 0.3s ease-in-out;
   // }
+}
+.PrimaryHeading {
+  background-color: #ffe9c5;
+  color: #000;
+  padding: 1rem 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }

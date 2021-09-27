@@ -8,7 +8,7 @@ const Category = ({ section, match, history }) => {
   return (
     <section className='HeroSection'>
       <div className='productCategories'>
-        <div className='productCategories__heading'>All Categories</div>
+        <div className='PrimaryHeading'>All Categories</div>
         <div className='productCategories__lists'>
           {section.map((el, index) => {
             return (
@@ -35,21 +35,66 @@ const Category = ({ section, match, history }) => {
       <div className='Carousel'>
         <HomeCarousel />
       </div>
-      <div className='TopDeals'>TopDeals</div>
+      <div className='TopDeals'>
+        <div className='PrimaryHeading'> TopDeals</div>
+
+        <div className='TopDealsBox'>
+          <div className='TopDealsBox__Items'>
+            <img
+              className='TopDealsBox__Items--Image'
+              src='/Images/mens.jpeg'
+              alt=''
+            ></img>
+            <span className='TopDealsBox__Items--Text'>Text</span>
+          </div>
+          <div className='TopDealsBox__Items'>
+            <img
+              className='TopDealsBox__Items--Image'
+              src='/Images/mens.jpeg'
+              alt=''
+            ></img>
+            <span className='TopDealsBox__Items--Text'>Text</span>
+          </div>
+          <div className='TopDealsBox__Items'>
+            <img
+              className='TopDealsBox__Items--Image'
+              src='/Images/mens.jpeg'
+              alt=''
+            ></img>
+            <span className='TopDealsBox__Items--Text'>Text</span>
+          </div>
+          <div className='TopDealsBox__Items'>
+            <img
+              className='TopDealsBox__Items--Image'
+              src='/Images/mens.jpeg'
+              alt=''
+            ></img>
+            <span className='TopDealsBox__Items--Text'>Text</span>
+          </div>
+        </div>
+      </div>
       <div className='SubCategories'>
         {/* <h2>Sub Categories</h2> */}
         <div className='subCategory'>
           {section.map((el, index) => {
             return (
-              <div key={index} className='subCategoryItems'>
+              <div key={index} className='image_wrap'>
+                <img src={el.imageUrl} alt='missing' />
                 <div
-                  className='subCategoryItems__image'
+                  className='grad dark_edge'
                   onClick={() => history.push(`${match.url}${el.linkUrl}`)}
-                >
-                  <img className='' src={el.imageUrl} alt='missing'></img>
-                </div>
-                <span className='subCategoryItems__text'>{el.title}</span>
+                ></div>
+                <div className='image_text'>{el.title}</div>
               </div>
+              // <div key={index} className='subCategoryItems'>
+              //   <div
+              //     className='subCategoryItems__image'
+              //     onClick={() => history.push(`${match.url}${el.linkUrl}`)}
+              //   >
+              //     <img className='' src={el.imageUrl} alt='missing'></img>
+              //   </div>
+              //   <span className='subCategoryItems__text'>{el.title}</span>
+              // </div>
             )
           })}
         </div>
