@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { auth } from '../Firebase/firebase.utils'
-
+import { connect } from 'react-redux'
 const UserProfile = ({ currentuser }) => (
   <div>
     <h1>Profile</h1>
@@ -26,5 +26,7 @@ const UserProfile = ({ currentuser }) => (
     <button onClick={() => auth.signOut()}>Sign out</button>
   </div>
 )
-
-export default UserProfile
+const mapStateToProps = (state) => ({
+  currentuser: state.user.currentUser,
+})
+export default connect(mapStateToProps)(UserProfile)

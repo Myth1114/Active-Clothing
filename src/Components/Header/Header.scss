@@ -8,6 +8,28 @@ header {
   // box-shadow: rgba(0, 0, 0, 0.5) 0 0px 2px 0;
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px 0;
 }
+.MobileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px 0;
+  & .userBox {
+    display: flex;
+    align-self: center;
+    height: 4.5rem;
+    width: 4.5rem;
+    background-color: #f3f3f4;
+    border-radius: 50%;
+    & img {
+      align-self: center;
+      border-radius: 50%;
+      padding: 1rem;
+    }
+  }
+}
+
 .headerLogo {
   margin: 0 2rem;
 }
@@ -32,8 +54,8 @@ header {
 //   color: #fff;
 // }
 .searchIcon {
-  color: #fff;
-  margin: 0.4rem;
+  color: $button-colors;
+  // margin: 0.4rem;
 }
 .search {
   padding: 1rem 0;
@@ -49,17 +71,17 @@ header {
 .search__input {
   font-family: inherit;
   font-size: 1.2rem;
-  background-color: #fafafa;
+  background-color: #f3f3f4;
   border: 1px solid #e2e5ec;
-  padding: 1rem 1rem;
+  border-radius: 10rem;
+  padding: 1.3rem 1rem;
   /* border-radius: 10rem; */
   transition: all 0.3s ease;
   margin-right: -3rem;
-  width: 90%;
+  width: 95%;
 }
 .search__input:focus {
   outline: none;
-  width: 95%;
 }
 .search__input ::-webkit-input-placeholder {
   font-weight: 100;
@@ -67,7 +89,7 @@ header {
 }
 .search__button {
   border: none;
-  background-color: $button-colors;
+  // background-color: $button-colors;
 }
 .search__button:focus {
   outline: none;
@@ -84,6 +106,11 @@ header {
 //media queries
 @media (max-width: 700px) {
   header {
+    display: none;
+  }
+}
+@media (min-width: 701px) {
+  .MobileHeader {
     display: none;
   }
 }

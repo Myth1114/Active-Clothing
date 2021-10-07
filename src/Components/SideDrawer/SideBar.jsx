@@ -5,6 +5,7 @@ import Drawer from '@material-ui/core/Drawer'
 import IconButton from '@material-ui/core/IconButton'
 import Divider from '@material-ui/core/Divider'
 import MenuIcon from '@material-ui/icons/Menu'
+import { Dashboard } from '@material-ui/icons'
 
 const drawerWidth = 250
 
@@ -22,15 +23,18 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
   },
   menuButton: {
-    color: 'red',
+    color: '#ff4417',
     marginRight: theme.spacing(0),
     [theme.breakpoints.up('lg')]: {
       display: 'none',
     },
+    backgroundColor: '#f3f3f4',
+    // borderRadius: 0,
+    marginLeft: '.1rem',
   },
   MenuIcon: {
-    marginLeft: '.5rem',
-    fontSize: '4rem',
+    // marginLeft: '.5rem',
+    fontSize: '2.5rem',
   },
   content: {
     flexGrow: 1,
@@ -81,7 +85,7 @@ export default function SideBar() {
         onClick={toggleDrawer}
         className={classes.menuButton}
       >
-        <MenuIcon className={classes.MenuIcon} />
+        <Dashboard className={classes.MenuIcon} />
       </IconButton>
     </div>
   )

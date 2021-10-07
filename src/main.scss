@@ -1,5 +1,5 @@
-$button-colors: #ffa931;
-
+$button-colors: #ff4417;
+// #ffa931
 @import './Components/HeroSection.scss';
 @import './Components/ProductCard/ProductCard.scss';
 @import './Components/CollectionPreview/CollectionPreview.scss';
@@ -8,6 +8,8 @@ $button-colors: #ffa931;
 @import './Components/Header/Header.scss';
 @import './Components/Variables/Variables.scss';
 @import './Directory/Directory.scss';
+@import './Components/CartDropdown/cart-dropdown.styles.scss';
+@import './Components/CartDropdownItems/CartDropdownItems.scss';
 *,
 ::after,
 ::before {

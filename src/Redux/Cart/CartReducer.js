@@ -1,0 +1,25 @@
+import CartActionTypes from './CartTypes'
+import { addItemToCart } from './CartUtils'
+const INITIAL_STATE = {
+  hidden: true,
+  cartItems: [],
+}
+
+const CartReducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case CartActionTypes.TOGGLE_CART_HIDDEN:
+      return {
+        ...state,
+        hidden: !state.hidden,
+      }
+    case CartActionTypes.ADD_TO_CART:
+      return {
+        ...state,
+        cartItems: addItemToCart(state.cartItems, action.payload),
+        //here we are storing privious cart items as well as any new item added to cart
+      }
+    default:
+      return state
+  }
+}
+export default CartReducer
