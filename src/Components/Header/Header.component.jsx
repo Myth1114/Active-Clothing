@@ -12,6 +12,12 @@ import { connect } from 'react-redux'
 import CartDropdown from '../CartDropdown/CartDropdown'
 // import CartIcon from '../cartIcon/CartIcon'
 // import { Avatar } from '@material-ui/core'
+import {
+  selectCartItems,
+  selectCartHidden,
+} from '../../Redux/Cart/CartSelector'
+import { selectCurrenttUser } from '../../Redux/User/UserSelector'
+import { createStructuredSelector } from 'reselect'
 
 const Header = ({ currentUser, hidden, ToggleCartHidden, cartItems }) => (
   <div className='section__Header'>
@@ -105,13 +111,10 @@ const Header = ({ currentUser, hidden, ToggleCartHidden, cartItems }) => (
 
   // </div>
 )
-const mapStateToProps = ({
-  user: { currentUser },
-  cart: { hidden, cartItems },
-}) => ({
-  currentUser,
-  hidden,
-  cartItems,
+const mapStateToProps = createStructuredSelector({
+  hidden: selectCartHidden,
+  cartItems: selectCartItems,
+  currentUser: selectCurrenttUser,
 })
 const mapDispatchToProps = (dispatch) => ({
   ToggleCartHidden: () => dispatch(ToggleCartHidden()),

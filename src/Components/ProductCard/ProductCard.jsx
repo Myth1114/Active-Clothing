@@ -1,6 +1,8 @@
+import { Snackbar } from '@material-ui/core'
 import React from 'react'
 import { connect } from 'react-redux'
 import { AddItem } from '../../Redux/Cart/CartActions'
+import SnackBar from '../SnackBar/SnackBar'
 
 const ProductCard = ({ item, addItem }) => {
   const { id, imageUrl, name, price } = item
@@ -16,6 +18,7 @@ const ProductCard = ({ item, addItem }) => {
           <button onClick={() => addItem(item)} className='custom-btn btn-2'>
             Add To Cart
           </button>
+          <SnackBar />
         </div>
       </div>
     </section>

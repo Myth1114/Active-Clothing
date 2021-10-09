@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { auth } from '../Firebase/firebase.utils'
 import { connect } from 'react-redux'
+import { selectCurrenttUser } from '../../Redux/User/UserSelector'
+
 const UserProfile = ({ currentuser }) => (
   <div>
     <h1>Profile</h1>
@@ -27,6 +29,6 @@ const UserProfile = ({ currentuser }) => (
   </div>
 )
 const mapStateToProps = (state) => ({
-  currentuser: state.user.currentUser,
+  currentuser: selectCurrenttUser(state),
 })
 export default connect(mapStateToProps)(UserProfile)
