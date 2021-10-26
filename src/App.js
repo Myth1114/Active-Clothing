@@ -12,6 +12,7 @@ import SigninSignup from './Pages/SigninSignup/SigninSignup.component'
 
 import { connect } from 'react-redux'
 import { setCurrentUser } from './Redux/User/UserAction'
+import CartPage from './Components/CartPage/CartPage'
 
 class App extends React.Component {
   constructor() {
@@ -63,6 +64,7 @@ class App extends React.Component {
             }
           />
           <Route path='/userProfile' component={UserProfile} />
+          <Route path='/cart' component={CartPage} />
           {/* render={() =>
               !!this.state.currentUser ? (
                 // <div>this is {this.state.currentUser.displayName} </div>

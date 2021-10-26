@@ -12,10 +12,10 @@ function HomeCarousel() {
     },
   ]
 
-  const captionStyle = {
-    fontSize: '2em',
-    fontWeight: 'bold',
-  }
+  // const captionStyle = {
+  //   fontSize: '2em',
+  //   fontWeight: 'bold',
+  // }
   const slideNumberStyle = {
     fontSize: '20px',
     fontWeight: 'bold',
