@@ -2,8 +2,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-gap: 1rem;
-  margin: 1rem;
 }
 .productCategories {
   grid-column: 1 / span 1;
@@ -11,8 +9,8 @@
   margin-left: 2rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  &__heading {
-  }
+  width: 75%;
+  height: 40rem;
   &__lists {
     // margin-left: 2rem;
     ul {
@@ -20,9 +18,12 @@
       list-style: none;
       & li {
         text-transform: capitalize;
+        &:hover {
+          background-color: #fafafa;
+        }
         & a {
           padding: 1rem 1rem;
-          font-size: 1.1rem;
+          font-size: 1.3rem;
           line-height: 3.5rem;
         }
       }
@@ -49,7 +50,7 @@
   grid-template-rows: auto;
   grid-gap: 1rem;
   overflow-x: scroll;
-
+  width: 100%;
   // & .subCategoryItems {
   //   display: grid;
   //   grid-template-columns: repeat(2, auto);
@@ -151,23 +152,24 @@
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   grid-column: 4 / -1;
   // background-color: orchid;
+  width: 70%;
+  height: 40rem;
 }
 .TopDealsBox {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  height: 48rem;
+  height: 34rem;
   // background-color: paleturquoise;
   &__Items {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0.5rem;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
       rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     &--Image {
-      width: 12rem;
+      width: 8rem;
     }
     &--Text {
       align-self: flex-start;
@@ -176,10 +178,10 @@
     }
   }
 }
-// .TopDealsBox::-webkit-scrollbar {
-//   width: 5rem;
-//   color: red;
-// }
+.TopDealsBox::-webkit-scrollbar {
+  width: 0rem;
+}
+
 //Media Queries
 @media (max-width: 700px) {
   .productCategories,

@@ -45,31 +45,31 @@ const Category = ({ section, match, history }) => {
               src='/Images/mens.jpeg'
               alt=''
             ></img>
-            <span className='TopDealsBox__Items--Text'>Text</span>
+            <span className='TopDealsBox__Items--Text'>35% OFF</span>
           </div>
           <div className='TopDealsBox__Items'>
             <img
               className='TopDealsBox__Items--Image'
-              src='/Images/mens.jpeg'
+              src='/Images/jackets.jpeg'
               alt=''
             ></img>
-            <span className='TopDealsBox__Items--Text'>Text</span>
+            <span className='TopDealsBox__Items--Text'>20% OFF</span>
           </div>
           <div className='TopDealsBox__Items'>
             <img
               className='TopDealsBox__Items--Image'
-              src='/Images/mens.jpeg'
+              src='/Images/hats.jpg'
               alt=''
             ></img>
-            <span className='TopDealsBox__Items--Text'>Text</span>
+            <span className='TopDealsBox__Items--Text'>20% OFF</span>
           </div>
           <div className='TopDealsBox__Items'>
             <img
               className='TopDealsBox__Items--Image'
-              src='/Images/mens.jpeg'
+              src='/Images/sneakers.jpeg'
               alt=''
             ></img>
-            <span className='TopDealsBox__Items--Text'>Text</span>
+            <span className='TopDealsBox__Items--Text'>20% OFF</span>
           </div>
         </div>
       </div>
@@ -86,6 +86,7 @@ const Category = ({ section, match, history }) => {
                 ></div>
                 <div className='image_text'>{el.title}</div>
               </div>
+
               // <div key={index} className='subCategoryItems'>
               //   <div
               //     className='subCategoryItems__image'

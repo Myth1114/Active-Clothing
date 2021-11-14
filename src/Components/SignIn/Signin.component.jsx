@@ -3,11 +3,11 @@ import { signInWithGoogle } from '../Firebase/firebase.utils'
 class SignIn extends React.Component {
   constructor() {
     super()
-
     this.state = {
       email: '',
       password: '',
     }
+    console.log(this.state)
   }
   handleSubmit = (e) => {
     e.preventDefault()
@@ -17,6 +17,7 @@ class SignIn extends React.Component {
     const { name, value } = e.target
     this.setState({ [name]: value })
   }
+
   render() {
     return (
       <div className='sign-in'>

@@ -3,12 +3,16 @@ import { Carousel } from 'react-carousel-minimal'
 function HomeCarousel() {
   const data = [
     {
-      image: '/Images/Hello There, Welcome to Zinniprime.png',
-      // caption: `<div>
-      //             San Francisco
-      //             <br/>
-      //             Next line
-      //           </div>`,
+      image: '/Images/carousel-1.jpg',
+    },
+    {
+      image: '/Images/carousel-2.jpg',
+    },
+    {
+      image: '/Images/carousel-3.jpg',
+    },
+    {
+      image: '/Images/carousel-4.jpg',
     },
   ]
 
@@ -53,7 +57,7 @@ function HomeCarousel() {
             // thumbnailWidth='100px'
             style={{
               textAlign: 'center',
-              // maxWidth: '850px',
+
               // maxHeight: '500px',
               margin: '0 auto',
             }}
