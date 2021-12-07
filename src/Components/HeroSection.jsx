@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import HomeCarousel from './Carousel/Carousel'
 // import { Link } from 'react-router-dom'
 const Category = ({ section, match, history }) => {
-  console.log(section)
+  console.log('this is section', match)
   return (
     <section className='HeroSection'>
       <div className='productCategories'>
@@ -13,8 +13,8 @@ const Category = ({ section, match, history }) => {
           {section.map((el, index) => {
             return (
               <ul key={index}>
-                <li>
-                  <a href='/#'>{el.title}</a>
+                <li onClick={() => history.push(`${match.url}${el.linkUrl}`)}>
+                  <span>{el.title}</span>
                 </li>
               </ul>
             )

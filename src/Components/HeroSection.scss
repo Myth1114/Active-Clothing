@@ -16,12 +16,13 @@
     ul {
       border: 1px solid #fafafa;
       list-style: none;
+      cursor: pointer;
       & li {
         text-transform: capitalize;
         &:hover {
           background-color: #fafafa;
         }
-        & a {
+        & span {
           padding: 1rem 1rem;
           font-size: 1.3rem;
           line-height: 3.5rem;

@@ -14,12 +14,6 @@ const UserProfile = ({ currentuser }) => {
           <div>
             <h1>{currentuser.displayName}</h1>
             <h2>{currentuser.email}</h2>
-            {/* <img
-            src={currentuser.photoURL}
-            alt=''
-            width='100px'
-            height='180px'
-          ></img> */}
           </div>
         ) : (
           <div>
