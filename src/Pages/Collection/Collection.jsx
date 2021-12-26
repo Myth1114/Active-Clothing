@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import ProductCard from '../../Components/ProductCard/ProductCard'
 import { selectCollectionID } from '../../Redux/Shop/ShopSelector'
 
-const CollectionPage = ({ collection }) => {
+const CollectionPage = ({ collection, match }) => {
+  console.log(match)
   console.log('this is collection', collection)
   return (
     <div className='CollectionPage'>

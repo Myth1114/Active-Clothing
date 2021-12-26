@@ -36,8 +36,7 @@ const Category = ({ section, match, history }) => {
         <HomeCarousel />
       </div>
       <div className='TopDeals'>
-        <div className='PrimaryHeading'> TopDeals</div>
-
+        <div className='PrimaryHeading'>TopDeals</div>
         <div className='TopDealsBox'>
           <div className='TopDealsBox__Items'>
             <img
