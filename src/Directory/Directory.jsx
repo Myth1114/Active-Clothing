@@ -21,7 +21,6 @@ const Directory = ({ section }) => {
           </ul>
         )
       })} */}
-      <h1>qwerty</h1>
     </div>
   )
 }

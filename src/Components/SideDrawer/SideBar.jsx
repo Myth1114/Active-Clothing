@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#f3f3f4',
     // borderRadius: 0,
     marginLeft: '.1rem',
+    '&:hover': {
+      backgroundColor: '#fff',
+  },
   },
   MenuIcon: {
     // marginLeft: '.5rem',

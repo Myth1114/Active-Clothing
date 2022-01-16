@@ -1,7 +1,6 @@
 import React from 'react'
 import { Redirect, Route, Switch } from 'react-router'
 // import { Link } from 'react-router-dom'
-import './App.css'
 import { auth, userProfileDoc } from './Components/Firebase/firebase.utils'
 import Header from './Components/Header/Header.component'
 import UserProfile from './Components/Userprofile/UserProfile'
@@ -15,35 +14,45 @@ import { setCurrentUser } from './Redux/User/UserAction'
 import CartPage from './Components/CartPage/CartPage'
 
 class App extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      currentUser: null,
-    }
-  }
   unsubscribeFromAuth = null
 
+  // componentDidMount() {
+  //   const { setCurrentUser, collectionsArray } = this.props
+  //   console.log(collectionsArray, 'This is collectionarray')
+  //   this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+  //     if (userAuth) {
+  //       const userRef = await userProfileDoc(userAuth)
+  //       userRef.onSnapshot((snapShot) => {
+  //         // console.log(snapShot)
+  //         setCurrentUser({
+  //           id: snapShot.id,
+  //           ...snapShot.data(),
+  //         })
+  //       })
+  //     }
+  //     setCurrentUser(userAuth);
+  //     addCollectionAndDocuments(
+  //       'collections',
+  //       collectionsArray.map(({ title, items }) => ({ title, items }))
+  //     )
+  //   })
+  // }
   componentDidMount() {
     const { setCurrentUser } = this.props
+
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await userProfileDoc(userAuth)
 
         userRef.onSnapshot((snapShot) => {
-          console.log(snapShot)
-          setCurrentUser(
-            {
-              id: snapShot.id,
-              ...snapShot.data(),
-            },
-            () => {
-              console.log(this.state)
-            }
-          )
+          setCurrentUser({
+            id: snapShot.id,
+            ...snapShot.data(),
+          })
         })
-      } else {
-        setCurrentUser(userAuth)
       }
+
+      setCurrentUser(userAuth)
     })
   }
   componentWillUnmount() {
@@ -51,7 +60,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className='App'>
+      <>
         <Header />
         <Switch>
           <Route exact path='/' component={Homepage} />
@@ -79,12 +88,16 @@ class App extends React.Component {
         {/* <Route exact path='/' component={Homepage} />
         <Route path='/topic' component={Topics} />
         <Route path='/topic/:topicId' component={TopicDetail} /> */}
-      </div>
+      </>
     )
   }
 }
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
+// const mapStateToProps = ({ user }) => ({
+//   currentUser: user.currentUser,
+//   collectionsArray: selectCollectionsForPreview,
+// })
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
 })
 const mapDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),

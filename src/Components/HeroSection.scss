@@ -11,10 +11,10 @@
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   width: 75%;
   height: 40rem;
+  background-color: #fff;
   &__lists {
     // margin-left: 2rem;
     ul {
-      border: 1px solid #fafafa;
       list-style: none;
       cursor: pointer;
       & li {
@@ -152,7 +152,7 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   grid-column: 4 / -1;
-  // background-color: orchid;
+  background-color: #fff;
   width: 70%;
   height: 40rem;
 }
@@ -161,7 +161,7 @@
   flex-direction: column;
   overflow-y: scroll;
   height: 34rem;
-  // background-color: paleturquoise;
+ 
   &__Items {
     display: flex;
     justify-content: center;

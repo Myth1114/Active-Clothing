@@ -4,8 +4,7 @@ const CollectionPreview = ({ items, title }) => (
   <section className='CollectionPreview'>
     <h1>{title}</h1>
     <div className='CollectionPreview__Items'>
-      {items
-        .filter((el, idx) => idx < 4)
+      {items   
         .map((item) => {
           return (
             <div className='CollectionPreview__Card'>

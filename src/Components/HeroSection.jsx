@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import HomeCarousel from './Carousel/Carousel'
 // import { Link } from 'react-router-dom'
 const Category = ({ section, match, history }) => {
-  console.log('this is section', match)
+  console.log('this is section', section)
   return (
     <section className='HeroSection'>
       <div className='productCategories'>

@@ -1,0 +1,55 @@
+.Section_FeaturedProducts {
+  margin: 3rem 10rem;
+}
+.FeaturedProducts {
+  background-color: #fff;
+  padding: 1rem;
+  &__Heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  &__Products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+    & .ProductCard {
+      display: grid;
+      padding: 1rem;
+      border: 1px solid #dee2e6;
+      border-color: #dee2e6;
+      border-radius: 0.3rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: none;
+      // transform: scale(0.99);
+      transition: box-shadow 0.5s, transform 0.5s;
+      cursor: pointer;
+      &:hover {
+        // transform: scale(1);
+        box-shadow: 2px 2px 22px rgba(0, 0, 0, 0.2);
+      }
+      & .Image {
+        & img {
+          aspect-ratio: 1;
+        }
+      }
+      & .Price {
+        text-transform: capitalize;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #e62e04;
+      }
+      & .Name {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #666;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .Section_FeaturedProducts {
+    margin: 3rem 0.5rem;
+  }
+}

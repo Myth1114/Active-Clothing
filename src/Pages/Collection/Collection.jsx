@@ -4,16 +4,18 @@ import ProductCard from '../../Components/ProductCard/ProductCard'
 import { selectCollectionID } from '../../Redux/Shop/ShopSelector'
 
 const CollectionPage = ({ collection, match }) => {
-  console.log(match)
+  // console.log(match)
   console.log('this is collection', collection)
   return (
     <div className='CollectionPage'>
       <h2>collection page</h2>
-      <h1>{collection.title}</h1>
+      <h1>{collection ? collection.title : null}</h1>
       <div className=''>
-        {collection.items.map((item) => (
-          <ProductCard key={item.id} item={item} />
-        ))}
+        {collection
+          ? collection.items.map((item) => (
+              <ProductCard key={item.id} item={item} />
+            ))
+          : null}
       </div>
     </div>
   )
